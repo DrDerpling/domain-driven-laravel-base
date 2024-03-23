@@ -48,5 +48,6 @@ return Application::configure(basePath: dirname(__DIR__, 3))
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->withProviders(
-        require __DIR__ . '/providers.php'
+        require __DIR__ . '/providers.php',
+        false // We are loading the bootstrap providers manually
     )->create();
