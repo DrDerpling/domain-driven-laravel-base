@@ -1,10 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Domains\BaseDomain\Services;
 
 use App\Domains\BaseDomain\Exceptions\AppDomainNotFound;
 use Exception;
-
 use InvalidArgumentException;
 
 class DomainDirectoryService
@@ -29,6 +30,7 @@ class DomainDirectoryService
         $domains = $this->getFolderContents($baseDomainPath);
         /** @var string[] $domainPaths */
         $domainPaths = [];
+
 
         foreach ($domains as $domain) {
             $domainPath = base_path(self::DOMAIN_PATH) .  $domain;

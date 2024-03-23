@@ -7,16 +7,23 @@
     "require": {
         "php": "^8.2",
         "laravel/framework": "^11.0",
-        "laravel/tinker": "^2.9"
+        "laravel/tinker": "^2.9",
+        "phpro/grumphp": "^2.5"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
+        "friendsofphp/php-cs-fixer": "^3.52",
         "laravel/pint": "^1.13",
         "laravel/sail": "^1.26",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.0",
+        "nunomaduro/larastan": "^2.9",
+        "orchestra/testbench": "^9.0",
+        "phpstan/phpstan": "^1.10",
         "phpunit/phpunit": "^10.5",
-        "spatie/laravel-ignition": "^2.4"
+        "slevomat/coding-standard": "^8.15",
+        "spatie/laravel-ignition": "^2.4",
+        "squizlabs/php_codesniffer": "*"
     },
     "autoload": {
         "psr-4": {
@@ -38,6 +45,9 @@
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
         ],
+        "post-install-cmd": [
+            "mkdir -p .git && mkdir -p .git/hooks && cp ./dev/pre-commit ./.git/hooks/pre-commit"
+        ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
@@ -58,7 +68,9 @@
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "phpro/grumphp": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
     },
     "minimum-stability": "stable",

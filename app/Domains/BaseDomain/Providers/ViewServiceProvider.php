@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Domains\BaseDomain\Providers;
 
 use App\Domains\BaseDomain\Services\DomainDirectoryService;
 use Illuminate\View\FileViewFinder;
 use Illuminate\View\ViewServiceProvider as ServiceProvider;
 
-class ViewServiceProvider  extends ServiceProvider
+class ViewServiceProvider extends ServiceProvider
 {
     public function register()
     {
