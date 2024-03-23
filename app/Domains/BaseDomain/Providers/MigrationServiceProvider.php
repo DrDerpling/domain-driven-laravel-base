@@ -9,8 +9,6 @@ use Illuminate\Support\ServiceProvider;
 
 class MigrationServiceProvider extends ServiceProvider
 {
-    private ?DomainDirectoryService $domainDirectoryService = null;
-
     /**
      * Bootstrap any application services.
      *
