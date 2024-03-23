@@ -93,10 +93,10 @@ sail artisan test
 ## Domain Structure
 ```
 Domains
-└── Order
+└── Product
     ├── Console
     │   └── Commands
-    │       └── OrderSyncCommand.php
+    │       └── ProductSyncCommand.php
     ├── Events
     ├── Database
     │   ├── Factories
@@ -105,31 +105,31 @@ Domains
     ├── Exceptions
     ├── Http
     │   ├── Controllers
-    │   │   ├── OrderController.php
-    │   │   └── OrderlineController.php
+    │   │   ├── ProductController.php
+    │   │   └── ProductDetailController.php
     │   ├── Middleware
     │   └── Requests
-    │       └── OrderRequest.php
+    │       └── ProductRequest.php
     ├── Jobs
-    │   └── OrderSync.php
+    │   └── ProductSync.php
     ├── Models
-    │   └── Order.php
+    │   └── Product.php
     ├── Providers
     ├── Repositories
-    │   └── OrderRepository.php
+    │   └── ProductRepository.php
     ├── Tests
     │   ├── Feature
-    │   │   ├── OrderControllerTest.php
-    │   │   └── OrderlineControllerTest.php
+    │   │   ├── ProductControllerTest.php
+    │   │   └── ProductDetailControllerTest.php
     │   └── Unit
-    │   │   └── OrderRepositoryTest.php
+    │       └── ProductRepositoryTest.php
     │   └── Integration
-    │       └── OrderSyncTest.php 
+    │       └── ProductSyncTest.php 
     ├── resources
     │   ├── css
     │   ├── js
     │   └── views
-    │       └── order // This is the domain name and should be the same as the domain name
+    │       └── product // This is the domain name and should be the same as the domain name
     │           └── home.blade.php
     ├── routes
     │   ├── web.php
