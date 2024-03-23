@@ -7,7 +7,6 @@ simple changes to the default Laravel project.
 - [Installation](#markdown-header-installation)
 - [Building the frontend](#markdown-header-building-the-frontend)
 - [Testing](#markdown-header-testing)
-- [Features](#markdown-header-features)
 - [Domain Structure](#markdown-header-domain-structure)
 
 ## Pre-requisites
