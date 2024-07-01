@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Framework\Services;
 
 use App\Framework\Exceptions\AppModulesNotFound;
-use Exception;
 use InvalidArgumentException;
 
 class ModulesDirectoryService
