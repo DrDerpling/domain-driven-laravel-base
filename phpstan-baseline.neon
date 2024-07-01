@@ -3,4 +3,4 @@ parameters:
 		-
 			message: "#^Undefined variable\\: \\$this$#"
 			count: 1
-			path: app/Domains/BaseDomain/routes/console.php
+			path: app/Framework/routes/console.php

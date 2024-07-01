@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Framework\Providers;
 
-use App\Framework\Services\DomainDirectoryService;
+use App\Framework\Services\ModulesDirectoryService;
 use Illuminate\View\FileViewFinder;
 use Illuminate\View\ViewServiceProvider as ServiceProvider;
 
@@ -20,7 +20,7 @@ class ViewServiceProvider extends ServiceProvider
 
     public function registerViewFinder(): void
     {
-        $domainDirectoryService = app(DomainDirectoryService::class);
+        $domainDirectoryService = app(ModulesDirectoryService::class);
         $domainMakerViews = $this->getDomainViewPaths($domainDirectoryService);
 
         $this->app->bind('view.finder', function ($app) use ($domainMakerViews) {
@@ -38,7 +38,7 @@ class ViewServiceProvider extends ServiceProvider
      * @return string[]
      * @throws \Exception
      */
-    public function getDomainViewPaths(DomainDirectoryService $domainDirectoryService): array
+    public function getDomainViewPaths(ModulesDirectoryService $domainDirectoryService): array
     {
         $viewPaths = [];
         $listDomainPaths = $domainDirectoryService->listDomainPaths();

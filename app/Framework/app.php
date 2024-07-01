@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Framework\Services\DomainDirectoryService;
+use App\Framework\Services\ModulesDirectoryService;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 return Application::configure(basePath: dirname(__DIR__, 2))
     ->withRouting(
         using: function (Application $application) {
-            $domainDirectoryService = new DomainDirectoryService();
+            $domainDirectoryService = new ModulesDirectoryService();
             $domainPaths = $domainDirectoryService->listDomainPaths();
 
             if (empty($domainPaths)) {

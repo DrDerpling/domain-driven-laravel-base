@@ -6,6 +6,6 @@ namespace App\Framework\Exceptions;
 
 use Exception;
 
-class AppDomainNotFound extends Exception
+class AppModulesNotFound extends Exception
 {
 }

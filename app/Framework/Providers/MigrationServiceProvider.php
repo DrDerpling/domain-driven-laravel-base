@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Framework\Providers;
 
-use App\Framework\Services\DomainDirectoryService;
+use App\Framework\Services\ModulesDirectoryService;
 use Illuminate\Support\ServiceProvider;
 
 class MigrationServiceProvider extends ServiceProvider
@@ -28,7 +28,7 @@ class MigrationServiceProvider extends ServiceProvider
      */
     protected function registerMigrations(): void
     {
-        $domainDirectoryService = app(DomainDirectoryService::class);
+        $domainDirectoryService = app(ModulesDirectoryService::class);
         $domains = $domainDirectoryService->listDomainPaths();
 
         foreach ($domains as $domainPath) {
