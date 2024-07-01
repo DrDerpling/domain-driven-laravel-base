@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Domains\BaseDomain\Tests;
+namespace App\Framework\Tests;
 
 use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Foundation\Application;

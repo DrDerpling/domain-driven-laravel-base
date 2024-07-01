@@ -2,8 +2,8 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "vite --config app/Domains/Frontend/vite.config.js",
-        "build": "vite --config app/Domains/Frontend/vite.config.js build"
+        "dev": "vite --config app/Frontend/vite.config.js",
+        "build": "vite --config app/Frontend/vite.config.js build"
     },
     "devDependencies": {
         "axios": "^1.6.4",

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Domains\BaseDomain\Providers;
+namespace App\Framework\Providers;
 
-use App\Domains\BaseDomain\Services\DomainDirectoryService;
+use App\Framework\Services\DomainDirectoryService;
 use Illuminate\Support\ServiceProvider;
 
 class MigrationServiceProvider extends ServiceProvider
