@@ -2,12 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Framework\Database\Seeders;
+namespace Database\Seeders;
 
-use App\Framework\Models\User;
+use App\Modules\DemoModule\Models\User;
 use Illuminate\Database\Seeder;
-
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class DatabaseSeeder extends Seeder
 {

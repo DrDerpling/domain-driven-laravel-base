@@ -21,12 +21,12 @@ class ViewServiceProvider extends ServiceProvider
     public function registerViewFinder(): void
     {
         $domainDirectoryService = app(ModulesDirectoryService::class);
-        $domainMakerViews = $this->getDomainViewPaths($domainDirectoryService);
+        $modulesMakerViews = $this->getDomainViewPaths($domainDirectoryService);
 
-        $this->app->bind('view.finder', function ($app) use ($domainMakerViews) {
+        $this->app->bind('view.finder', function ($app) use ($modulesMakerViews) {
             $paths = $app['config']['view.paths'];
 
-            foreach ($domainMakerViews as $path) {
+            foreach ($modulesMakerViews as $path) {
                 $paths[] = $path;
             }
 
@@ -54,6 +54,9 @@ class ViewServiceProvider extends ServiceProvider
 
             $viewPaths[] = $viewDir;
         }
+
+        // Add Frontend views
+        $viewPaths[] = app_path('Frontend/views');
 
         return $viewPaths;
     }
